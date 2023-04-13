@@ -1,0 +1,35 @@
+<html>
+
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&family=Source+Sans+Pro&display=swap"
+	 rel="stylesheet">
+</head>
+
+<body>
+	<div class="header">
+		<button id="mode-toggle">
+            <img id="mode-icon" src="/images/night-mode-purple.png">
+        </button>
+		<h2 id="title" class="title">Find Your Film</h2>
+		<h2 id="subtitle">
+			<a id="subtitle" href="watchlist.html">Watchlist</a>
+		</h2>
+	</div>
+	<div class="searchContainer">
+		<label for="search-input"></label>
+		<input type="text" id="search-input" name="search" placeholder="Search for a movie">
+		<button type="submit" id="search-button" class="search-button">Search</button>>
+	</div>
+	<div id="resultsContainer" class="resultsContainer">
+		<div id="noResults">
+			<img id="startExploringImage" src="/images/startExploring.png"/>
+			<h3 id="startExploringText">Start exploring</h3>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>

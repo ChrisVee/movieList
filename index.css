@@ -1,0 +1,246 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+}
+
+/*dark-mode*/
+.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+/*the toggle button*/
+#mode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 35px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+#mode-toggle img {
+    width: 40px;
+    height: 40px;
+}
+
+.header {
+    width: 100%;
+    height: 208px;
+    background-image: url("/images/watchlist.png");
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    width: 359px;
+    height: 47.55px;
+    left: 42px;
+    top: 82.45px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42.7947px;
+    line-height: 24px;
+    /* or 56% */
+    align-items: center;
+    text-align: justify;
+    letter-spacing: -0.045em;
+    color: #FFFFFF;
+}
+
+#subtitle {
+    width: 140px;
+    height: 20px;
+    left: 390px;
+    top: 100px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: right;
+    color: #FFFFFF;
+}    
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+#search-input, #search-button {
+    box-sizing: border-box;  
+    align-items: center;
+    padding: 0px 1em;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 0px;
+}
+
+
+#search-button {
+  background-image: linear-gradient(to right, #7F00FF, #E100FF);
+  background-size: 200% auto;
+  color: #fff;
+  transition: all 0.3s ease-out;
+  animation: gradient 4s ease infinite;
+}
+
+#search-button:hover {
+  background-position: right center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.resultsContainer, .watchlist {
+    padding: 60px 44px;
+    bottom: 38.22%;
+    max-width: 700px; /* Change the value as per your requirement */
+    margin: 0 auto; 
+}
+
+.data1 {
+    width: 90%;
+    border-bottom: lightgrey 1px solid;
+    padding: 21px;
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+}
+
+.thumbnail {
+    width: auto;
+    height: 140px;
+    border: grey 1px solid;
+}
+
+#startExploringText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #DFDDDD;
+    margin: 1em;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0;
+}
+
+#plot, .plot {
+    grid-column: 1 / -1;
+}
+
+#noResults {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20em;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+a {
+  color: white; /* Change the color of visited links */
+  text-decoration: none; /* Remove the underline */
+  background-color: transparent; /* Set the background color to transparent */
+}
+
+/* controls the font of the entire app*/
+p, button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+addToWatchlist{
+    background-color: white;
+}
+
+#movieTitle {
+    grid-column: 1 / 1;
+}
+
+#rank {
+    grid-column: 2 / -1;
+}
+
+#watchlist-icon {
+    padding-right: .4em;
+}
+
+.addToWatchlist {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.dark-mode .addToWatchlist {
+  color: white;
+  background-color: transparent;
+}
+
+.dark-mode .addToWatchlist #watchlist-icon {
+  filter: invert(1);
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 767px) {
+  .resultsContainer {
+    max-width: 100%;
+    padding: 40px 20px 0px 20px;
+    margin: 0px;
+  }
+  
+    #title {
+    padding-left: 20px;;
+  }
+  
+  #subtitle {
+    padding-right: 20px;
+  }
+}

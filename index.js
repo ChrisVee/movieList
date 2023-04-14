@@ -19,9 +19,9 @@ if (modeIcon) {
         document.body.classList.toggle('dark-mode');
 
         if (document.body.classList.contains("dark-mode")) {
-            modeIcon.src = "/images/day-mode.png";
-        } else {
             modeIcon.src = "/images/night-mode-purple.png";
+        } else {
+            modeIcon.src = "/images/day-mode.png";
         }
     })
 };

@@ -1,5 +1,5 @@
 # MovieList App
-I built this app using a combination of HTML, CSS, JS, and two OMDB API requests to get the movie data.
+I built this app using a combination of HTML, CSS, JS, and two OMDB API requests to get the movie data. Includes dark mode.
 
 You can use the live version here: https://movie-list-chris.netlify.app/
 
